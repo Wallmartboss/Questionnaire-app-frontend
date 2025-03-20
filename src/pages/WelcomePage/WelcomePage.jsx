@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../../css/index.css';
 import s from './WelcomePage.module.css';
-import logo from '../../image/eliftech.jpg';
+import logo from '/image/eliftech.jpg';
 const welcomePage = () => (
   <div>
     <div className={s.welcomePage}>
