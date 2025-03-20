@@ -1,0 +1,49 @@
+.welcomePage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, rgba(196, 196, 196, 0), #bedbb0);
+}
+.linkButton {
+  font-size: 40px;
+  text-decoration: none;
+  display: block;
+  width: 400px;
+  height: 70px;
+  line-height: 150%;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+.linkButton:hover {
+  /* color: white; */
+  background-color: lightgoldenrodyellow;
+}
+.logoTitle {
+  display: flex;
+  font-size: 48px;
+  font-weight: 600;
+  align-items: center;
+  padding: 0;
+  gap: 14px;
+}
+.welcomeText {
+  font-size: 34px;
+  line-height: 150%;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 24px;
+  margin-bottom: 48px;
+  width: 800px;
+}
+.logo {
+  width: 250px;
+  display: block;
+}

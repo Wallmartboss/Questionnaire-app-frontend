@@ -1,0 +1,151 @@
+.wrapper {
+	margin: 30px;
+	width: 1600px;
+	min-height: calc(100vh - 80px);
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	border: 4px solid #4f4b4b;
+	border-radius: 10px;
+	position: relative;
+}
+
+.mainText {
+	color: black;
+	font-size: 30px;
+	font-weight: bold;
+	display: block;
+	margin-bottom: 40px;
+}
+
+.number {
+	// display: block;
+	width: 20px;
+	font-size: 24px;
+	font-weight: 500;
+}
+
+.label {
+	display: flex;
+	flex-direction: column;
+	width: 600px;
+	font-size: 24px;
+	font-weight: 500;
+}
+
+.labelAnswer {
+	display: flex;
+	flex-direction: column;
+	width: 600px;
+	font-size: 24px;
+	font-weight: 500;
+	margin-left: 40px;
+	margin-bottom: 15px;
+}
+
+.type {
+	display: flex;
+	flex-direction: column;
+	width: 180px;
+	font-size: 24px;
+	font-weight: 500;
+}
+
+.formQuestion {
+	display: flex;
+	gap: 20px;
+}
+
+.removeButton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100px;
+	height: 40px;
+	font-size: 20px;
+	margin-top: 35px;
+}
+
+.titleInput {
+	width: 400px;
+	height: 50px;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+.descriptionInput {
+	width: 400px;
+	height: 150px;
+	font-size: 20px;
+	margin-bottom: 20px;
+	resize: none;
+}
+
+.questionArea {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+}
+
+.questionInput {
+	width: 600px;
+	height: 40px;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+.typeInput {
+	width: 180px;
+	height: 40px;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+.choiceInput {
+	width: 600px;
+	height: 40px;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+.inputNumber {
+	width: 100px;
+	margin-bottom: 20px;
+}
+
+.correctAnswerInput {
+	width: 600px;
+	height: 40px;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+.multiArea {
+	margin-left: 40px;
+	display: flex;
+	gap: 20px;
+}
+
+.multiAnswers {
+	display: flex;
+	margin-left: 40px;
+	gap: 20px;
+}
+
+.buttonAdd {
+	display: block;
+	width: 180px;
+	height: 50px;
+	font-size: 24px;
+	font-weight: 500;
+	background-color: aquamarine;
+	border-radius: 6px;
+	border: none;
+	cursor: pointer;
+	margin-bottom: 20px;
+	margin-left: 90px;
+
+	&:hover {
+		background-color: lightgreen;
+	}
+}

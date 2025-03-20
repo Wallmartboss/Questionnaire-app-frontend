@@ -1,0 +1,16 @@
+.navbar {
+	position: absolute;
+	top: -35px;
+	left: 30px;
+	display: flex;
+}
+
+.navLink {
+	color: blue;
+	font-size: 20px;
+	text-decoration: none;
+
+	&:hover {
+		color: blueviolet;
+	}
+}
