@@ -14,17 +14,43 @@ const QuestTaking = () => {
   const [correctCount, setCorrectCount] = useState(0);
 
   useEffect(() => {
-    axios
-      .get(`/quests/${id}`)
-      .then(res => {
+    const fetchQuiz = async () => {
+      try {
+        const res = await axios.get(`/quests/${id}`);
         setQuiz(res.data);
-        setStartTime(Date.now());
-      })
-      .catch(err => console.log(err));
+
+        const savedState = localStorage.getItem(`quiz-taking-${id}`);
+        if (savedState) {
+          const { savedAnswers, savedStartTime, savedCompleted } =
+            JSON.parse(savedState);
+          setAnswers(savedAnswers || {});
+          setStartTime(savedStartTime || Date.now());
+          setCompleted(savedCompleted || false);
+        } else {
+          setStartTime(Date.now());
+        }
+      } catch (err) {}
+    };
+
+    fetchQuiz();
   }, [id]);
 
+  useEffect(() => {
+    if (quiz && startTime && !completed) {
+      const stateToSave = {
+        savedAnswers: answers,
+        savedStartTime: startTime,
+        savedCompleted: completed,
+      };
+      localStorage.setItem(`quiz-taking-${id}`, JSON.stringify(stateToSave));
+    }
+  }, [answers, startTime, quiz, id, completed]);
+
   const handleAnswerChange = (qIndex, value) => {
-    setAnswers({ ...answers, [qIndex]: value });
+    setAnswers(prev => {
+      const newAnswers = { ...prev, [qIndex]: value };
+      return newAnswers;
+    });
   };
 
   const calculateCorrectAnswers = () => {
@@ -74,8 +100,9 @@ const QuestTaking = () => {
       })
       .then(() => {
         setCompleted(true);
+        localStorage.removeItem(`quiz-taking-${id}`);
       })
-      .catch(err => console.log(err));
+      .catch(err => console.log('Error submitting quiz:', err));
   };
 
   if (!quiz) return <div>Loading...</div>;
@@ -158,7 +185,7 @@ const QuestTaking = () => {
           <h3 className={s.label}>Your Answers:</h3>
           {quiz.questions.map((q, index) => (
             <p key={index} className={s.quizDescription}>
-              <span>Question {index + 1}</span>&nbsp;&nbsp;
+              <span>Question {index + 1}</span>  
               {q.text}: <strong>{JSON.stringify(answers[index])}</strong>
             </p>
           ))}

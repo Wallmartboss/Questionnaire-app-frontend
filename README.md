@@ -1,6 +1,6 @@
 Test task from EkifTech.
 Questionnaire Builder App.
-Realized base lavel, because I have no time for next levels (I able to do it, but 3 days - it is not enough).
+Realized middle level, because I have no time for next levels (I able to do it, it is not so light, but 3 days - it is not enough).
 
 Project realized on React (front-end) and Node.js + Express + MongoDB (back-end).
 

@@ -1,19 +1,20 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import s from '../../pages/QuestBuilder/QuestBuilder.module.scss';
+// import { v4 as uuidv4 } from 'uuid';
 
 const QuestionInput = ({
   question,
   index,
   handleQuestionChange,
-  handleChoiceChange,
   handleAddChoice,
   handleRemoveQuestion,
   handleRemoveChoice,
+  // handleRemoveCorrectAnswer,
+  handleChoiceChange,
 }) => {
   const [correctAnswers, setCorrectAnswers] = useState(
     question.correctAnswers || question.correctAnswer || []
   );
-
   const handleCorrectAnswerChange = (idx, value) => {
     const updatedCorrectAnswers = [...correctAnswers];
     updatedCorrectAnswers[idx] = value;
@@ -25,6 +26,7 @@ const QuestionInput = ({
     setCorrectAnswers(updatedCorrectAnswers);
     handleQuestionChange(index, 'correctAnswers', updatedCorrectAnswers);
   };
+
   return (
     <div className={s.questionArea}>
       <div className={s.formQuestion}>
