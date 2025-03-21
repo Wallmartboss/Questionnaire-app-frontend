@@ -13,4 +13,4 @@ back - https://github.com/Wallmartboss/Questionnaire-app-backend.
 
 Live pages:
 backend - https://questionnaire-app-backend-7clv.onrender.com,
-frontend - https://questionnaire-app-frontend-hg6taq50g-wallmartboss-projects.vercel.app
+frontend - https://questionnaire-app-frontend.vercel.app
