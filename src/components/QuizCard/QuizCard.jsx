@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import s from './quizCard.module.scss';
+import s from './QuizCard.module.scss';
 
 const QuizCard = ({ quiz, handleDelete }) => {
   const [menuOpen, setMenuOpen] = useState(false);
