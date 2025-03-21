@@ -5,7 +5,7 @@ const welcomePage = () => (
   <div>
     <div className={s.welcomePage}>
       <div className={s.logoTitle}>
-        <img src="/image/eliftech.jpg" alt="logo" className={s.logo} />
+        <img src="/image/eliftech.png" alt="logo" className={s.logo} />
         Questionnaire
       </div>
       <p className={s.welcomeText}>Here you can create and take quizzes.</p>
