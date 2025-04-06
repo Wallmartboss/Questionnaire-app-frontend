@@ -128,7 +128,7 @@ const QuestCatalog = () => {
           <option value="completions">Amount of Completions</option>
         </select>
         <button onClick={toggleSortOrder} className={s.sortButton}>
-          {sortOrder === 'asc' ? 'Sort Descending' : 'Sort Ascending'}
+          {sortOrder === 'asc' ? 'Sort Acending' : 'Sort Descending'}
         </button>
       </div>
 
